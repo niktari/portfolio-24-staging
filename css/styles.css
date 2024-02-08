@@ -27,12 +27,12 @@
     --yellow: rgb(229, 177, 42);
     --dark-grey: rgb(59, 53, 55);
     --grey: rgb(118, 101, 105);
-    --light-grey: rgb(241, 236, 236);
+    --light-grey: rgb(242, 242, 242);
 
     --sans-serif: 'sohne', sans-serif;
     --font-size-small: 0.6rem;
     --font-size-medium: 1rem;
-    --font-size-large: 2rem;
+    --font-size-large: 1.75rem;
 }
 
 html {

@@ -16,7 +16,7 @@
     font-size: 20px;
 
     --page-margin: 1rem;
-    --page-margin-bottom: 8rem;
+    --page-padding-bottom: 4rem;
     --black: rgb(0, 0, 0);
     --black-30: rgba(0, 0, 0, 0.3);
     --white: rgb(255, 255, 255);
@@ -32,7 +32,7 @@
     --sans-serif: 'sohne', sans-serif;
     --font-size-small: 0.6rem;
     --font-size-medium: 1rem;
-    --font-size-large: 1.75rem;
+    --font-size-large: 1.5rem;
 }
 
 html {
@@ -46,7 +46,7 @@ body {
     font-size: var(--font-size-medium);
     font-weight: normal;
     margin: var(--page-margin);
-    margin-bottom: var(--page-margin-bottom);
+    padding-bottom: var(--page-padding-bottom);
     letter-spacing: -0.02em;
     line-height: 1.2;
 }
@@ -63,6 +63,11 @@ h3 {
 h4 {
     font-size: var(--font-size-small);
     text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
+h5 {font-size: var(--font-size-small);
     letter-spacing: 0;
     font-weight: bold;
 }
@@ -86,6 +91,10 @@ button, input[type="submit"], input[type="reset"] {
     /* row-gap: 2rem; */
 }
 
+.span-4 {
+    grid-column: span 4;
+}
+
 .span-6 {
     grid-column: span 6;
 }
@@ -102,9 +111,9 @@ button, input[type="submit"], input[type="reset"] {
 
 nav {
     position: fixed;
-    bottom: 1rem;
-    /* left: 50%;
-    transform: translateX(-50%); */
+    top: 1rem;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -116,6 +125,11 @@ nav {
 
 nav a {
     color: var(--black-30);
+}
+
+nav a:hover {
+    color: var(--black);
+    transition: 0.3s linear;
 }
 
 #nav--main, #nav--params {
@@ -133,8 +147,8 @@ nav, #nav--params {
 
 .circle{
     display: flex;
-    width: 2rem;
-    height: 2rem;
+    width: 35px;
+    height: 35px;
     border-radius: 100%;
   }
 
@@ -161,8 +175,8 @@ nav, #nav--params {
 #about {
     letter-spacing: -0.02em;
     line-height: 1.1;
-    min-height: 100vh;
-    /* padding-top: 3rem; */
+    /* min-height: 100vh; */
+    margin-top: 4rem;
 }
 
 #about p {
@@ -178,7 +192,7 @@ nav, #nav--params {
 /* SECTION: PROJECTS */
 #projects {
     /* background-color: red; */
-    padding-top: 1rem;
+    margin-top: 4rem;
     padding-bottom: 4rem;    
 }
 
@@ -214,15 +228,49 @@ nav, #nav--params {
     gap: 1rem;
 }
 
+/* SECTION: INFO */
+
+#info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem;
+    background-color: plum;
+}
+
+.info--column h4 {
+    margin-bottom: 0.5rem;
+}
+
+.info--group {
+    margin-bottom: 2rem;
+}
+
+.info--item {
+    margin-bottom: 1rem;
+}
+
+.info--reveal {
+    display: none;
+}
+
+.info--connect:hover ~ .info--reveal {
+    display: inline-block;
+}
+
 /* UTILITY: BADGE */
 .badge {
     background-color: var(--white-50);
     border-radius: 5px;
     backdrop-filter: blur(10px);
     padding: 7px 10px 4px 10px;
+    width: fit-content;
 }
 
-.tags h4 {
+.tags h4, .tag {
     border-radius: 3px;
     padding: 5px 7px 1px 7px;
 }

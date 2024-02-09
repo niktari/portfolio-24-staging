@@ -261,6 +261,73 @@ nav, #nav--params {
     display: inline-block;
 }
 
+/* PAGE: PROJECT */
+
+#project {
+    margin-top: 4rem;
+}
+
+details>summary {
+    list-style: none;
+  }
+
+details>summary, details > p {
+    margin-bottom: 1rem;
+}
+
+
+  summary::-webkit-details-marker {
+    display: none
+  }
+  
+  summary::after {
+    content: 'More';
+    /* background-color: var(--white-50);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    padding: 7px 10px 4px 10px;
+    width: fit-content; */
+    color: var(--black-30);
+  }
+  
+  details[open] summary:after {
+    content: "Less";
+  }
+
+  summary:hover::after {
+    cursor: pointer;
+    color: var(--black);
+    transition: 0.3s linear;
+  }
+
+  .project--wrapper-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project--wrapper-image {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project--wrapper-image img {
+    width: 100%;
+  }
+
+  .project--wrapper-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project--wrapper-credits h4 {
+    margin-bottom: 0.5rem;
+  }
+
+
+
 /* UTILITY: BADGE */
 .badge {
     background-color: var(--white-50);

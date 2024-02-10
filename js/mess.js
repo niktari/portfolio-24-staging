@@ -220,3 +220,30 @@ function mess(c, wait_ms = 1000) {
       if (window.mess_resize) mess_resize();
     });
   }
+
+
+
+// SHOW & HIDE SPIRAL
+
+let spiralElem = document.getElementById('spiral');
+
+let revealButton = document.getElementById('nav--reveal');
+
+let circles = document.querySelectorAll('.circle')
+
+function revealSpiral() {
+    spiralElem.classList.toggle("hide-spiral");
+    if (spiralElem.classList.contains("hide-spiral")) { 
+            revealButton.innerHTML = "Show Animation";
+            for(let circle of circles){
+                circle.style.display = 'none';
+            }
+        } else {
+            revealButton.innerHTML = "Hide Animation";
+            for(let circle of circles){
+                circle.style.display = 'flex';
+            }
+        }
+}
+
+revealButton.addEventListener("click", revealSpiral);

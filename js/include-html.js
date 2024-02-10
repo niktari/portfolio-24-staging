@@ -1,30 +1,16 @@
-
-
-// Define the custom <my-include> element
-class MyIncludeElement extends HTMLElement {
-	connectedCallback() {
-	  const rel = this.getAttribute("rel");
-  
-	  // Fetch the content of the specified HTML file
-	  fetch(rel)
-      .then((response) => response.text())
-      .then((data) => {
-        const parsedContent = new DOMParser().parseFromString(data, "text/html").body;
-
-        // Replace the current element with the parsed content
-        this.replaceWith(...parsedContent.childNodes);
-
-        // Use Promise.resolve() and setTimeout to ensure that replaceWith has completed
-        // Promise.resolve().then(() => {
-        //   setTimeout(() => {
-        //     mainScript();
-        //   });
-        // });
-      })
-      .catch((error) => console.error(`Error fetching ${rel}:`, error));
-	}
+async function fetchAndInsertContent(targetId, contentUrl) {
+  try {
+      const response = await fetch(contentUrl);
+      const data = await response.text();
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+          targetElement.innerHTML = data;
+      } else {
+          console.error(`Element with id '${targetId}' not found.`);
+      }
+  } catch (error) {
+      console.error(`Error fetching or inserting content: ${error}`);
   }
-  
-  // Define the custom element tag with a hyphenated name
-  customElements.define("my-include", MyIncludeElement);
-  
+}
+
+fetchAndInsertContent("info", "/../snippets/info.html");

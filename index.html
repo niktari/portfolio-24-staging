@@ -12,27 +12,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/styles.css">
-
-        <script src="./js/include-html.js" async defer></script>
+        <script src="./js/include-html.js" defer></script>
+        <script src="./js/script.js" defer></script>
+        <script src="./node_modules/p5/lib/p5.js" defer></script>
+        <script src="./js/mess.js" defer></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
-        <main>
             <nav>
                 <div class="badge"><a class="active" href="index.html">NM</a></div>
     
             <div id="nav--main" class="badge">
                 <div class="nav-item"><a href="./projects/">Projects</a></div>
                 <div class="nav-item"><a href="./sandbox/">Sandbox</a></div>
-                <div class="nav-item"><a href="#">Info</a></div>
+                <div class="nav-item"><a id="nav--info" href="#">Info</a></div>
             </div>
     
             <div id="nav--params">
-                <div class="badge"><a href="#">Hide Animation</a></div>
+                <div class="badge"><a id="nav--reveal" href="#">Hide Animation</a></div>
                 <div class="circle">
                     <div style="background-color: var(--purple);" class="semicircle first"></div>
                     <div style="background-color: var(--green);" class="semicircle second"></div>
@@ -60,9 +60,115 @@
                 </div>
             </section>
 
-            <!-- <my-include rel="./snippets/info.html"></my-include> -->
+            <section id="info" class="hide-element">
+                <div class="info--column span-4">
+                    <h4 class="badge tag">Speaking</h4>
+                    <div class="info--item">
+                        <p>Critical Computation</p>
+                        <h5>for Parsons School of Design</h5>
+                        <h5>2023</h5>
+                    </div>
+            
+                    <div class="info--item">
+                        <p>Processing Community Catalog Launch</p>
+                        <h5>for Processing Foundation</h5>
+                        <h5>2023</h5>
+                    </div>
+            
+                    <div class="info--item">
+                        <p>Generative Pathways: A Zine-Making Workshop</p>
+                        <h5>with SPICY and Secret Riso Club for The Brooklyn Art Book Fair</h5>
+                        <h5>2022</h5>
+                    </div>
+            
+                    <div class="info--item">
+                        <p>Community Building and Resilience</p>
+                        <h5>for BeginCountour and The Processing Foundation</h5>
+                        <h5>2022</h5>
+                    </div>
+            
+                    <div class="info--item">
+                        <p>Let’s Make a Zine</p>
+                        <h5>with SPICY and Secret Riso Club for Nowadays</h5>
+                        <h5>2022</h5>
+                    </div>
+            
+                    <div class="info--item">
+                        <p>Theorizing Activism</p>
+                        <h5>for Barnard College</h5>
+                        <h5>2019</h5>
+                    </div>
+            
+                    <div class="info--item">
+                        <p>Decolonizing the Media through Art, Activism, and Publishing</p>
+                        <h5>with SPICY for The New Museum Youth Summit</h5>
+                        <h5>2019</h5>
+                    </div>
+                </div>
+            
+                <div class="info--column span-4">
+                    <div class="info--group">
+                        <h4 class="badge tag">Teaching</h4>
+                        <div class="info--item">
+                            <p>Techniculture: A Critical Lens on Modular Type & Generative Design</p>
+                            <h5>Type Electives</h5>
+                            <h5>Spring 2024</h5>
+                        </div>
+            
+                        <div class="info--item">
+                            <p>Advanced Design: Product Design</p>
+                            <h5>The Cooper Union</h5>
+                            <h5>Spring 2024</h5>
+                        </div>
+            
+                        <div class="info--item">
+                            <p>Core 2: Interaction</p>
+                            <h5>Parsons School of Design</h5>
+                            <h5>Spring 2024</h5>
+                        </div>
+            
+                        <div class="info--item">
+                            <p>Core 1: Interaction</p>
+                            <h5>Parsons School of Design</h5>
+                            <h5>Fall 2023</h5>
+                        </div>
+                    </div>
+            
+                <div class="info--group">
+                    <h4 class="badge tag">Additional Clients & Collaborators</h4>
+                    <div class="info--item">
+                        <p>The Bill & Melinda Gates Foundation</p>
+                        <p>The Processing Foundation</p>
+                        <p>Conservation International</p>
+                        <p>Meta</p>
+                        <p>The New Museum</p>
+                    </div>
+                   
+                </div>
+            </div>
+            
+            
+            
+            <div class="info--column span-4">
+                <div class="info--group">
+                    <h4 class="badge tag">Connect</h4>
+                        <ul class="info--item">
+                            <li><a class="info--connect" href="mailto:nmakagiansar@gmail.com">Email</a> <span class="info--reveal inactive">nmakagiansar@gmail.com</span></li>
+                            <li><a class="info--connect" href="https://www.linkedin.com/in/nikkimakagiansar/">LinkedIn</a> <span class="info--reveal inactive">/in/nikkimakagiansar/</span></li>
+                        </ul>
+                </div>
+            
+            <div class="info--group">
+                <h4 class="badge tag">Colophon</h4>
+                <div class="info--item">
+                    <p>This website was hand-coded using HTML, CSS, and vanilla JavaScript. All text is set in Söhne by Klim Type. The animation was built using p5.js, an open source JavaScript drawing library.</p>
+                </div>
+               
+            </div>
+            </div>
+            </section>
 
-        </main>
+        <main id="spiral" class="show-spiral"></main>
     
     </body>
 </html>

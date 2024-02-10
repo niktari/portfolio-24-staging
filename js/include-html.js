@@ -15,11 +15,11 @@ class MyIncludeElement extends HTMLElement {
         this.replaceWith(...parsedContent.childNodes);
 
         // Use Promise.resolve() and setTimeout to ensure that replaceWith has completed
-        Promise.resolve().then(() => {
-          setTimeout(() => {
-            interactiveScript();
-          });
-        });
+        // Promise.resolve().then(() => {
+        //   setTimeout(() => {
+        //     mainScript();
+        //   });
+        // });
       })
       .catch((error) => console.error(`Error fetching ${rel}:`, error));
 	}

@@ -399,6 +399,10 @@ label:hover {
     padding: 5px 7px 1px 7px;
 }
 
+.coming-soon:hover {
+    cursor: not-allowed;
+}
+
 .hide-element {
     display: none;
 }

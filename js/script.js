@@ -14,21 +14,18 @@ function revealInfo() {
         topButton.style.display = 'flex';
     } else {
         infoButton.style.color = "var(--black)";
-            paramsNav.style.display = 'none';
-            topButton.style.display = 'none'
+        paramsNav.style.display = 'none';
+        topButton.style.display = 'none'
     }
 }
 
 infoButton.addEventListener("click", revealInfo);
 
 // BACK TO TOP
-
-console.log(topButton)
-
 window.onscroll = () => {
 
         if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30 && infoElem.classList.contains("hide-element")) {
-            topButton.style.display = "flex";
+            topButton.style.display = "block";
         } else {
             topButton.style.display = "none";
         }

@@ -142,11 +142,11 @@ nav {
     /* background-color: red; */
 }
 
-nav a {
+nav a, nav button {
     color: var(--black-30);
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
     color: var(--black);
     transition: 0.3s linear;
 }
@@ -162,6 +162,10 @@ nav, #nav--params {
 
 #nav--main {
     gap: 1rem;
+}
+
+#nav--top {
+    display: none;
 }
 
 .circle{
